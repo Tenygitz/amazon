@@ -1,0 +1,56 @@
+.LoginPage-logo{
+    width: 120px;
+    margin-top: 20px;
+   
+    margin-bottom: 20px;
+    object-fit: contain;
+    cursor: pointer;
+  
+   
+}
+.LoginPage{
+    display: flex;
+   flex-direction: column;
+  align-items: center;
+    height: 70vh;
+}
+.LoginPage-Details{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid grey;
+    background-color: whitesmoke;
+ 
+}
+.LoginPage-Details > h1{
+    margin-bottom: 10px;
+}
+.LoginPage-Details> form>h4{
+    margin-bottom: 5px;
+}
+.LoginPage-Details> form>input{
+    margin-bottom: 5px;
+    width: 100%;
+    height: 30px;
+}
+.LoginPage-Details> form>button{
+    background-color: rgb(243, 174, 46);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    
+}
+.LoginPage-Details>p{
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.LoginPage-Details>button{
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(243, 174, 46) ;
+}

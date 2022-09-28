@@ -1,0 +1,57 @@
+.logo{
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.header{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.searchIcon{
+    background-color: orange;
+    padding: 2px;
+}
+.searchBar{
+    display: flex;
+    flex: 1;
+    
+}
+.searchBar > input{
+    padding:10px;
+    height: 25px;
+}
+.nav-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.section1{
+    font-size: 15px;
+    color: rgba(209, 199, 199, 0.932);
+}
+.section2{
+    font-size: 20px;
+    color: azure;
+    font-weight: 600;
+}
+.cartIcon{
+    color:azure;
+}
+.nav-section1{
+    display: flex;
+    cursor: pointer;
+}
+.nav-section1 > span{
+    margin-left: 10px;
+    margin-right: 10px;
+}

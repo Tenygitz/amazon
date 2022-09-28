@@ -1,0 +1,17 @@
+.homepage > img{
+    width: 100%;
+    object-fit: contain;
+    mask-image:linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0)) ;
+    z-index: -1;
+    margin-bottom: -250px;
+}
+.homepage{
+    max-width: 1400px;
+    margin: auto;
+    
+}
+.rows{
+    display: flex;
+   margin-top: 20px;
+    
+}
