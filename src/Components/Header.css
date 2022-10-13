@@ -6,6 +6,15 @@
     object-fit: contain;
     cursor: pointer;
 }
+@media screen and (max-width:767px){
+    .logo{
+        width: 70px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+      
+    }
+}
 .header{
     background-color: black;
     display: flex;
@@ -15,6 +24,11 @@
     z-index: 100;
 }
 
+@media screen and (max-width:767px){
+    .header{
+   
+    }
+}
 .searchIcon{
     background-color: orange;
     padding: 2px;
@@ -23,6 +37,22 @@
     display: flex;
     flex: 1;
     
+}
+@media screen and (max-width:767px){
+    .searchBar{
+        display: flex;
+        flex: 0;
+       
+        
+    }
+}
+@media screen and (max-width:767px){
+   
+    .searchBar>input{
+        padding:0px;
+        height: 23px;
+        width:120px
+    }
 }
 .searchBar > input{
     padding:10px;
@@ -34,10 +64,21 @@
     justify-content: space-evenly;
    margin-left: 10px;
    margin-right: 10px;
+  
 }
+@media screen and (max-width:767px){
+    .nav-section{
+       
+       margin-left:30px;
+       margin-right: 0px;
+      
+    }
+}
+
 .section1{
     font-size: 15px;
     color: rgba(209, 199, 199, 0.932);
+    padding-top: 2px;
 }
 .section2{
     font-size: 20px;
@@ -51,7 +92,53 @@
     display: flex;
     cursor: pointer;
 }
-.nav-section1 > span{
+.nav-section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+@media screen and (max-width:767px){
+    .nav-section2{
+        display: none;
+       
+    }
+}
+.nav-section3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+@media screen and (max-width:767px){
+    .nav-section3{
+        display: none;
+       
+    }
+}.nav-section1 > span{
     margin-left: 10px;
     margin-right: 10px;
+}
+.location{
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 30px;
+   
+}
+@media screen and (max-width:767px){
+    .location{
+
+        display: none;
+    }
+}
+
+.locationIcon>i{
+padding-top: 12px;
+padding-right: 5px;
 }

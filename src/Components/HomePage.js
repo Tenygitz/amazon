@@ -1,15 +1,23 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "./HomePage.css";
 import Product from "./Products";
 import Header from "./Header";
-
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import ProductOverView from './ProductOverView';
+import Footer from './Footer';
 function HomePage() {
-  return (
+  let [show,setShow]=useState(false)
+  return (<>
     <div className='homepage'>
-      <Header/>
-        <img src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="BannerImage"/>
+      <Header/><Carousel className="carousel" autoPlay infiniteLoop showStatus={false} showThumbs={false} interval={5000}>
+        <img  className="homepage-img" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="BannerImage"/>
+        <img  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Fashion/Event/AugART/Teaser/PC/revised/V1/FIle-1_PC_01.jpg" alt="BannerImage"/>
+        <img  src="https://m.media-amazon.com/images/I/81pXJW9qztL.jpg" alt="BannerImage"/>
+        </Carousel>
         <div className='rows'>
         <Product id={1} title={"Apple iPhone 13 Pro"} price={109900} ratting={5} img={"https://m.media-amazon.com/images/I/61rrisp8qiL._SX679_.jpg"}/>
+        {show && <ProductOverView id={1} setShow={setShow} title={"Apple iPhone 13 Pro"} price={109900} ratting={5} img={"https://m.media-amazon.com/images/I/61rrisp8qiL._SX679_.jpg"}/>}
         <Product id={2} title={"Apple iPad Pro"} price={67390} ratting={4.5} img={"https://m.media-amazon.com/images/I/815KnP2wjDS._SX679_.jpg"}/>
         <Product id={3} title={"Redmi Note 11T 5G "} price={15999} ratting={4} img={"https://m.media-amazon.com/images/I/71hBRAcpDnL._SX679_.jpg"}/>
         <Product id={4} title={"iQOO Z6 Pro 5G"} price={20999} ratting={3.5} img={"https://m.media-amazon.com/images/I/61E4zA32FrL._SX569_.jpg"}/>
@@ -29,7 +37,10 @@ function HomePage() {
         </div>
        
        
-    </div>
+    </div><Footer/>
+    </>
+
+
   )
 
   }

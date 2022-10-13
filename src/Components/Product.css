@@ -7,6 +7,27 @@
     z-index: 5;
     
 }
+@media screen and (max-width:767px){
+    .products{
+       
+        margin-left: 50px;
+        margin-right: 50px;
+        background-color: azure;
+        z-index: 5;
+        margin-bottom: 30px;
+        text-align: center;
+        padding-top: 5px;
+        
+    }
+}
+@media screen and (max-width:767px){
+    .productImages{
+        width: 100%;
+        max-height: 175px !important;
+       
+        margin-bottom: 20px !important;
+    }
+}
 .products > img{
     width: 100%;
     max-height: 250px;

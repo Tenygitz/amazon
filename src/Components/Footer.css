@@ -1,0 +1,171 @@
+.Links{
+    display:flex ;
+    justify-content: space-around;
+    background-color:#28313B;
+    border-bottom: 1px solid rgb(117, 113, 113);
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+@media screen and (max-width:767px){
+    .Links{
+        padding-left: 20px;
+    padding-right: 20px;;
+       
+      }
+}
+li{
+    list-style: none;
+    
+}
+
+.Ontop{
+    display: flex;
+    justify-content: center;
+    background-color: #637283;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  
+   
+}
+.Ontop>button{
+    border: none;
+    background: transparent;
+    color: white;
+    font-weight: 700;
+}
+@media screen and (max-width:767px){
+    .Footer{
+        height: 84vh;
+       
+      }
+}
+a{
+    text-decoration: none;
+}
+.Links-info li, a{
+color: #ddd;
+margin-top: 5px;
+}
+.Links-container1 >h2{
+    color: azure;
+    font-weight: 700;
+    font-size: 19px;
+}
+.Links-container1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.Links-container2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width:767px){
+    .Links-container2{
+        display: none;
+       
+      }
+}
+.Links-container2 >h2{
+    color: azure;
+    font-weight: 700;
+    font-size: 19px;
+}
+.Footer1 >img {
+    width: 120px;
+    object-fit: contain;
+    cursor: pointer;
+    margin-right: 50px;
+}
+@media screen and (max-width:767px){
+    .Footer1 >img   {
+        width: 100px;
+       
+      }
+}
+.Footer1{
+    display: flex;
+    justify-content: center;
+   
+  
+   
+}
+.Footer-wrap{
+    background-color:#28313B;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+@media screen and (max-width:767px){
+    .Footer-wrap{
+        padding-top: 20px;
+        padding-bottom: 20px;
+       
+      }
+}
+
+.country{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  
+}
+@media screen and (max-width:767px){
+    .country{
+        display: none;
+       
+      }
+}
+.country> span{
+    margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+  color: #ddd;
+}
+.language{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd ;
+    padding: 5px;
+    cursor: pointer;
+}
+.Footer-end{
+   text-align: center;
+   color:aliceblue;
+   background-color: #131A22;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.language >i{
+    color: aliceblue;
+    padding-right: 5px;
+}
+@media screen and (max-width:767px){
+    .language >i {
+        padding-right: 2px;
+       
+      }
+}
+
+.Footer-end-content> span{
+    margin-right: 10px;
+}
+@media screen and (max-width:767px){
+    .Footer-end-content{
+        margin-bottom: 10px;
+       
+      }
+}
+.language > h1{
+    font-size: 18px;
+    color: #ddd;
+    padding-right: 10px;
+}
+
+@media screen and (max-width:767px){
+    .language > h1   {
+        font-size: 14px;
+        padding-right: 5px;
+        padding-top: 2px;
+       
+      }
+}

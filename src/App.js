@@ -9,6 +9,8 @@ import React,{useEffect} from "react";
 import { useStateValue } from './StateProvider';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from './Firebase';
+import SignUpPage from './Components/SignUpPage';
+import ProductOverView from './Components/ProductOverView';
 
 function App() {
 const [{user},dispatch]=useStateValue();
@@ -46,7 +48,8 @@ console.log("userr",user)
     
      <Route path="/checkout" element={ <CheckoutPage/>}/>
      <Route path="/login" element={<LoginPage/>}/>
-    
+     <Route path="/signup" element={<SignUpPage/>}/>
+     <Route  path="/productView" element={<ProductOverView/>}/>
      </Routes>
     
     </div>

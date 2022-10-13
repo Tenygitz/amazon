@@ -4,6 +4,14 @@
     object-fit: contain;
     margin-top: 20px;
 }
+@media screen and (max-width:767px){
+    .CheckoutProduc-img {
+        width: 150px;
+   margin-left: 20px;
+      
+       
+      }
+}
 .CheckoutProduct-wrap{
     display: flex;
     flex-direction: column;
@@ -14,6 +22,13 @@
 }
 .CheckoutProduct-wrap > h1,span{
     margin-bottom: 10px;
+}
+@media screen and (max-width:767px){
+    .CheckoutProduct-wrap > h1 {
+  font-size: 20px;
+      
+       
+      }
 }
 .price-infos > span{
     padding-left: 5px;

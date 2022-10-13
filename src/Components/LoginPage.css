@@ -14,6 +14,12 @@
   align-items: center;
     height: 70vh;
 }
+@media screen and (max-width:767px){
+    .LoginPage {
+        height: 53vh;
+        
+    }
+}
 .LoginPage-Details{
     width: 300px;
     display: flex;
@@ -22,6 +28,12 @@
     border: 1px solid grey;
     background-color: whitesmoke;
  
+}
+@media screen and (max-width:767px){
+    .LoginPage-Details {
+        width: 250px;
+        padding: 15px;
+    }
 }
 .LoginPage-Details > h1{
     margin-bottom: 10px;

@@ -10,6 +10,14 @@ function Header() {
   return (
     <div className="header">
     <img onClick={()=>navigate("/")} className="logo" src="https://pnggrid.com/wp-content/uploads/2021/05/Amazon-Logo-Transparent-1024x310.png"alt="logo"/>
+    <div className='location'>
+      <div className='locationIcon'>
+    <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div>
+    <h3 className='section1'>Hello</h3>
+    <h3>Select My Location</h3>
+    </div></div>
     <div className='searchBar'>
         <input type="text" />
         <SearchIcon className='searchIcon'/>
@@ -18,11 +26,11 @@ function Header() {
       <span className='section1'>Teny</span>
       <span className='section2'>Sign In</span>
     </div>
-    <div className="nav-section">
+    <div className="nav-section2">
       <span className='section1' >Return</span>
       <span  className='section2'>& Orders</span>
     </div>
-    <div className="nav-section">
+    <div className="nav-section3">
       <span className='section1'>Your</span>
       <span className='section2'>Prime</span>
     </div>

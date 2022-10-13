@@ -1,13 +1,23 @@
-.homepage > img{
+.homepage-img{
     width: 100%;
     object-fit: contain;
     mask-image:linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0)) ;
     z-index: -1;
-    margin-bottom: -250px;
+    margin-bottom: -150px;
+}
+@media screen and (max-width:767px){
+    .homepage-img{
+        width: 100%;
+        object-fit: contain;
+        mask-image:linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0)) ;
+        z-index: -1;
+        margin-bottom: -30px;
+    }
 }
 .homepage{
     max-width: 1400px;
     margin: auto;
+    margin-bottom: 50px;
     
 }
 .rows{
@@ -15,3 +25,18 @@
    margin-top: 20px;
     
 }
+@media screen and (max-width:767px){
+    .rows{
+       display: block;
+       margin-top: 20px;
+        
+    }
+}
+@media screen and (max-width:767px){
+    .carousel{
+        max-width: 500px;
+        height: 200px;
+}
+}
+
+   

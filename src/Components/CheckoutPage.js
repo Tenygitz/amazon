@@ -4,6 +4,7 @@ import "./CheckoutPage.css"
 import { useStateValue } from '../StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 import SubTotal from './SubTotal';
+import Footer from './Footer';
 
 function CheckoutPage() {
   const [{basket}]=useStateValue()
@@ -14,7 +15,7 @@ function CheckoutPage() {
         <img src="https://images-eu.ssl-images-amazon.com/images/G/31/gateway-2015/amazonshop/Desktop_Banner_Recruitment_Website.jpg" alt="Banner-Image"/>
         {
       basket?.length===0 ?( // if basket is empty
-        <div>
+        <div className='cartempty'>
         <h1>Your Cart is empty</h1>
         <p>Please Add Items to the cart to Continue Shopping</p>
         </div>
@@ -41,6 +42,7 @@ function CheckoutPage() {
       <SubTotal/>
     </div>)}
     </div>
+    <Footer/>
     </>
   )
 }

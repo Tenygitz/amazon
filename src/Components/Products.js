@@ -2,8 +2,11 @@ import React from 'react';
 import { useStateValue } from '../StateProvider';
 import "./Product.css";
 import Rating from '@mui/material/Rating';
+import {useNavigate} from"react-router-dom"
 
 function Product({id,title,ratting,price,img}) {
+
+  const navigate=useNavigate()
   const [{basket},dispatch]=useStateValue();// use context
   const addToBasketHandler=()=>{
    dispatch({
@@ -28,7 +31,7 @@ function Product({id,title,ratting,price,img}) {
                 <p><Rating name="half-rating-read" defaultValue={ratting} precision={0.5} readOnly />
             </p>
         </div>
-        <img src={img} />
+        <img className="productImages" src={img} onClick={()=>navigate("/productView")} />
         <button onClick={addToBasketHandler}>Add to Cart</button>
 
     </div>

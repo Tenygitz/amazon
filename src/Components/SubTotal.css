@@ -9,8 +9,23 @@
     margin-bottom: 20px;
     background-color: beige;
 }
+@media screen and (max-width:767px){
+    .SubTotals  {
+        max-width: 250px;
+        max-height: 200px;
+        margin-left: 20px;
+      
+       
+      }
+}
 .SubTotals > p{
     margin-bottom: 10px;
+}
+@media screen and (max-width:767px){
+    .SubTotals>h1  {
+       font-size: 27px;
+       
+      }
 }
 .SubTotals > button{
     margin-top: 10px;
