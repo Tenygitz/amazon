@@ -39,12 +39,12 @@ const unsubscribe = onAuthStateChanged(auth,(authUser)=>{ // check if user is lo
 console.log("userr",user)
 
   return (
-    <Router>
+    <Router basename="/amazon">
     <div className="App">
       
         <Routes>
        
-          <Route path="/" element={ <HomePage/>}/>
+          <Route path="/amazon" element={ <HomePage/>}/>
     
      <Route path="/checkout" element={ <CheckoutPage/>}/>
      <Route path="/login" element={<LoginPage/>}/>
