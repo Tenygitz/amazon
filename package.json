@@ -1,7 +1,7 @@
 {
   "name": "amazon",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
 
    "homepage": "http://Tenygitz.github.io/amazon",
    "dependencies": {
