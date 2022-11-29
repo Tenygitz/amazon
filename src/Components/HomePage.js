@@ -10,7 +10,7 @@ function HomePage() {
   let [show,setShow]=useState(false)
   return (<>
     <div className='homepage'>
-      <Header/><Carousel className="carousel" autoPlay infiniteLoop showStatus={false} showThumbs={false} interval={5000}>
+      <Header/><Carousel className="carousel" autoPlay infiniteLoop showStatus={false} showThumbs={false} interval={4000}>
         <img  className="homepage-img" src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" alt="BannerImage"/>
         <img  src="https://images-eu.ssl-images-amazon.com/images/G/31/img21/Fashion/Event/AugART/Teaser/PC/revised/V1/FIle-1_PC_01.jpg" alt="BannerImage"/>
         <img  src="https://m.media-amazon.com/images/I/81pXJW9qztL.jpg" alt="BannerImage"/>

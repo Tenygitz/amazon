@@ -2,9 +2,8 @@
   "name": "amazon",
   "version": "0.1.0",
   "private": true,
-
-   "homepage": "http://Tenygitz.github.io/amazon",
-   "dependencies": {
+  "homepage": "http://Tenygitz.github.io/amazon",
+  "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
@@ -27,6 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -48,3 +48,4 @@
     ]
   }
 }
+

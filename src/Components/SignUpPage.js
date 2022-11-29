@@ -4,28 +4,31 @@ import Header from './Header';
 import "./SignUpPage.css";
 import {createUserWithEmailAndPassword,updateProfile  } from "firebase/auth";
 import { auth, db } from '../Firebase';
+import { doc, setDoc } from "firebase/firestore";
 import Footer from './Footer';
 
 
 function SignUpPage() {
-    const [name,setName]=useState("")
+    const [displayName,setdisplayName]=useState("")
     const [number,setNumber]=useState("")
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const registerHandler=(e)=>{
              e.preventDefault()
-             createUserWithEmailAndPassword(auth,email,password).then((result)=>{
-                result.updateProfile({displayName:name}).then (()=>{
-                db.collection("user").add({
-                    id:result.user.uid,
-                    username:name,
-                    password:password,
-                    phoneNumber:number,
-                    email:email
-                })
-                })
-             })
-    }
+           
+             const res= createUserWithEmailAndPassword(auth, email, password)
+               .then((userCredential) => {
+                 // Signed in 
+                 const user = userCredential.user;
+                 // ...
+               }).then
+            setDoc(doc(db, "users", res.user.uid), {
+            displayName,
+            uid: res.user.uid,
+             email,
+            })
+           
+          }
   return (<>
   <Header/>
     <div className='SignUpPage'>
@@ -34,13 +37,13 @@ function SignUpPage() {
         <h1>Create Account</h1>
         <form>
             <h4>Your name</h4>
-            <input value={name} onChange={(e)=>setName(e.target.value)} type="text" placeholder='Your name'/>
+            <input onChange={(e)=>setdisplayName(e.target.value)} type="text" placeholder='Your name'/>
             <h4>Mobile number</h4>
-            <input value={number} onChange={(e)=>setNumber(e.target.value)}type="number" placeholder='Your Phone Number'/>
+            <input  onChange={(e)=>setNumber(e.target.value)}type="number" placeholder='Your Phone Number'/>
             <h4>Email</h4>
-            <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Your email'/>
+            <input  onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='Your email'/>
             <h4>Password</h4>
-            <input value={password} onChange={(e)=>setPassword(e.target.value)} type="email" placeholder='******'/>
+            <input onChange={(e)=>setPassword(e.target.value)} type="email" placeholder='******'/>
             <button onClick={registerHandler} type="submit">Sign In</button>
         </form>
     </div>

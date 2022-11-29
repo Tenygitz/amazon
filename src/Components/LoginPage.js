@@ -4,7 +4,7 @@ import { auth } from '../Firebase';
 import Header from './Header';
 import "./LoginPage.css";
 import {useNavigate} from "react-router-dom";
-import { signInWithEmailAndPassword,createUserWithEmailAndPassword  } from "firebase/auth";
+import { signInWithEmailAndPassword, } from "firebase/auth";
 import Footer from './Footer';
 
 
@@ -21,15 +21,7 @@ function LoginPage() {
         alert(e.message)
  })
     }
-    // const registerHandler=(e)=>{
-    //     e.preventDefault()           // stop refreshing the page
-    //     createUserWithEmailAndPassword(auth,email,password)
-    //     .then((auth)=>{
-    //     navigate("/")
-    //     }).catch((e)=>{
-    //     alert(e.message)
-    // })
-    // }
+    
   return (<>
   <Header/>
     <div className='LoginPage'>
