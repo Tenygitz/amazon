@@ -6,7 +6,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Footer from './Footer';
 import { useStateValue } from '../StateProvider';
 
-function ProductOverView({id,title,ratting,price,img,setShow}) {
+function ProductOverView({id,title,ratting,price,img,setOpen}) {
   //  const [{basket},dispatch]=useStateValue();
   const images=["https://m.media-amazon.com/images/I/61jLiCovxVL._SX679_.jpg",
 "https://m.media-amazon.com/images/I/71rswJs9W9L._SX679_.jpg",
@@ -16,7 +16,7 @@ const [selectImg,setSelectImg]=useState(0)
   console.log("ggg",title)
     const showHandler=()=>{
      
- setShow(true)
+
     }
     // const addCartHandler=()=>{
     //   dispatch({

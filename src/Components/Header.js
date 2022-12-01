@@ -1,10 +1,12 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "./Header.css";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useStateValue } from '../StateProvider';
 import {useNavigate} from "react-router-dom";
+import CartPopUp from './CartPopUp';
 function Header() {
+  const [open,setOpen]=useState(false)
   const navigate=useNavigate()
   const [{basket}]=useStateValue();
   return (
@@ -36,10 +38,23 @@ function Header() {
     </div>
     <div className="nav-section1" onClick={()=>navigate("./checkout")}>
     
+      
+      <span className='section2'>Cart</span>
+   
+    </div>
+    <div className="nav-section1" onClick={()=>setOpen(!open)}>
+    
       <ShoppingCartIcon className='cartIcon' />
       <span className='section2'>{basket?.length}</span>
    
     </div>
+    {
+      open && basket.map((items)=>{
+      return(
+      <CartPopUp id={items.id} setOpen={setOpen}
+      />)
+     
+    })}
     </div>
   )
 }

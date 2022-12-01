@@ -12,6 +12,7 @@ import { auth } from './Firebase';
 import SignUpPage from './Components/SignUpPage';
 import ProductOverView from './Components/ProductOverView';
 
+
 function App() {
 const [{user},dispatch]=useStateValue();
 
@@ -50,6 +51,7 @@ console.log("userr",user)
      <Route path="/login" element={<LoginPage/>}/>
      <Route path="/signup" element={<SignUpPage/>}/>
      <Route  path="/productView" element={<ProductOverView/>}/>
+    
      </Routes>
     
     </div>

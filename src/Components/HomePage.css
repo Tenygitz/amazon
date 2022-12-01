@@ -23,6 +23,7 @@
 .rows{
     display: flex;
    margin-top: 20px;
+   justify-content: space-evenly;
     
 }
 @media screen and (max-width:767px){

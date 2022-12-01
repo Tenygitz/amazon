@@ -1,16 +1,18 @@
 .products{
     display: flex;
     flex-direction: column;
+    
     margin-left: 10px;
     margin-right: 10px;
     background-color: azure;
     z-index: 5;
+    width: 250px;
     
 }
 @media screen and (max-width:767px){
     .products{
        
-        margin-left: 50px;
+        margin-left: 80px;
         margin-right: 50px;
         background-color: azure;
         z-index: 5;
@@ -20,27 +22,66 @@
         
     }
 }
-@media screen and (max-width:767px){
-    .productImages{
-        width: 100%;
-        max-height: 175px !important;
-       
-        margin-bottom: 20px !important;
-    }
-}
-.products > img{
-    width: 100%;
-    max-height: 250px;
-    object-fit: contain;
-    margin-bottom: 10px;
-}
+
+
 .products >button{
     background-color: rgb(243, 174, 46);
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
+    cursor: pointer;
+}
+.price-info{
+    margin-left: 10px;
+}
+.ratting-info{
+    margin-left: 8px;
 }
 .products >p {
 font-weight: 700;
 font-size: 18px;
+margin-top: 5px;
+margin-left: 10px;
 }
+.imgdiv{
+    width: 100%;
+    height: 250px;
+    
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+@media screen and (max-width:767px){
+    .imgdiv{
+        width:100% ;
+        height: 200px;
+        
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+       
+    }
+}
+.imgdiv>img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    position: absolute;
+}
+@media screen and (max-width:767px){
+    .imgdiv>img{
+        width: 100%;
+        height: 100%;
+        object-fit:contain;
+        position: absolute;
+        left: 10px;
+    }
+}
+.productImages{
+    z-index: 1;
+}
+.imgdiv:hover .productImage{
+    z-index: 999;
+    
+}
+
