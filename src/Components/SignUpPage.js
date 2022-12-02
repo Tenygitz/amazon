@@ -26,6 +26,8 @@ function SignUpPage() {
             displayName,
             uid: res.user.uid,
              email,
+            }).catch((error)=>{
+              alert(error.message)
             })
            
           }

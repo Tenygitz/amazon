@@ -1,12 +1,10 @@
 .LoginPage-logo{
     width: 120px;
     margin-top: 20px;
-   
     margin-bottom: 20px;
     object-fit: contain;
     cursor: pointer;
   
-   
 }
 .LoginPage{
     display: flex;
@@ -16,7 +14,7 @@
 }
 @media screen and (max-width:767px){
     .LoginPage {
-        height: 53vh;
+        height: 65vh;
         
     }
 }

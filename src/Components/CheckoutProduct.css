@@ -17,6 +17,14 @@
     flex-direction: column;
     padding: 30px;
 }
+@media screen and (max-width:767px){
+    .CheckoutProduct-wrap{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        margin-top: 15px;
+    }
+}
 .CheckoutProduct{
     display: flex;
 }

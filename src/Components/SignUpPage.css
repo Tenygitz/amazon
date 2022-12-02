@@ -6,8 +6,15 @@
     margin-bottom: 50px;
 
 }
+@media screen and (max-width:767px){
+    .SignUpPage{
+       
+        margin-bottom: 30px;
+    
+    }
+}
 .Signup-container{
-    width: 300px;
+width: 300px;
 height: 55vh;
 border: 1px solid grey;
 padding: 20px;
@@ -18,7 +25,7 @@ background-color: whitesmoke;
     .Signup-container {
         width: 250px;
         padding: 20px;
-        height: 47vh;
+        height: 53vh;
     }
 }
 .Signup-container>form>h4{
@@ -44,6 +51,18 @@ background-color: whitesmoke;
     margin-bottom: 10px;
     width: 100%;
     
+}
+@media screen and (max-width:767px){
+    .Signup-container> form>button{
+        background-color: rgb(243, 174, 46);
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+        
+    }
 }
 .Signup-container> h1{
     margin-bottom: 5px;

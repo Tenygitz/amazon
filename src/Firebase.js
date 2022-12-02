@@ -5,14 +5,14 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDJi95IoPjMa5k9akbNLJKzT2yw1OBeO5s",
-    authDomain: "fir-dfa1d.firebaseapp.com",
-    projectId: "fir-dfa1d",
-    storageBucket: "fir-dfa1d.appspot.com",
-    messagingSenderId: "746286990727",
-    appId: "1:746286990727:web:bf12f79d66959e85a03f22",
-    measurementId: "G-9XQVKMP6GR"
-  };
+  apiKey: "AIzaSyDVElG9sUbQ3KjvrFeCSRB-aNwX4_nir58",
+  authDomain: "clone-110bd.firebaseapp.com",
+  projectId: "clone-110bd",
+  storageBucket: "clone-110bd.appspot.com",
+  messagingSenderId: "156657550037",
+  appId: "1:156657550037:web:faebf1407ddb90f302185c",
+  measurementId: "G-FXGPESXNZJ"
+};
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
