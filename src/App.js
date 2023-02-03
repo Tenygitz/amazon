@@ -6,35 +6,37 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CheckoutPage from './Components/CheckoutPage';
 import LoginPage from './Components/LoginPage';
 import React,{useEffect} from "react";
-import { useStateValue } from './StateProvider';
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from './Firebase';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import SignUpPage from './Components/SignUpPage';
 import ProductOverView from './Components/ProductOverView';
+import {useSelector} from"react-redux";
+import {useDispatch} from"react-redux";
+import {login,logout} from "./redux/cart";
 
 
 function App() {
-const [{user},dispatch]=useStateValue();
+
+const {user}=useSelector((state)=>state.user)
+console.log("thrrr", user);
+const dispatch=useDispatch()
 
 useEffect(()=>{
 
-const unsubscribe = onAuthStateChanged(auth,(authUser)=>{ // check if user is logged in or not
-  if(authUser){
-     dispatch({
-      type:"Set_User",
-      user:authUser
-   })
+  const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+    const uid = user.uid;
+    dispatch(login({
+              uid:user.uid,
+              displayName:user.displayName,
+              email:user.email,
+              photoURL:user.photoURL,
+                  }))
+    } else {
+    // User is signed out
+    dispatch(logout())
     }
-    else{
-     dispatch({
-      type:"Set_User",
-      user:null
-    })
-  }
-  return()=>{
-    unsubscribe()
-  }
-})
+  });
 
 },[])
 console.log("userr",user)
@@ -43,10 +45,9 @@ console.log("userr",user)
     <Router>
     <div className="App">
       
-        <Routes>
+     <Routes>
        
-          <Route path="/" element={ <HomePage/>}/>
-    
+     <Route path="/" element={ <HomePage/>}/>
      <Route path="/checkout" element={ <CheckoutPage/>}/>
      <Route path="/login" element={<LoginPage/>}/>
      <Route path="/signup" element={<SignUpPage/>}/>

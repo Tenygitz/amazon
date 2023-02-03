@@ -1,11 +1,7 @@
 import React from 'react';
 import "./Footer.css";
 
-
-
 function Footer() {
-  
-
   const scrollUp=()=>{
       window.scrollTo({
           top:0,

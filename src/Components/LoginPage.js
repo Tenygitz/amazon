@@ -1,10 +1,9 @@
 
 import React,{useState} from 'react';
-import { auth } from '../Firebase';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import "./LoginPage.css";
-import {useNavigate} from "react-router-dom";
-import { signInWithEmailAndPassword, } from "firebase/auth";
 import Footer from './Footer';
 
 
@@ -13,14 +12,21 @@ function LoginPage() {
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
     const loginHandler=(e)=>{
-    e.preventDefault()
-    signInWithEmailAndPassword(auth,email,password)
-    .then((auth)=>{
-       navigate("/")
-      }).catch((e)=>{
-        alert(e.message)
- })
+      e.preventDefault()
+      const auth = getAuth();
+      signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+      // Signed in 
+      const user= userCredential.user;
+      // ...
+      navigate("/");
+    })
+    .catch((error) => {
+      alert(error.message)
+    });
+  
     }
+    
     
   return (<>
   <Header/>

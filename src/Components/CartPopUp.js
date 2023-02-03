@@ -1,23 +1,26 @@
 import React from 'react';
 import "./CartPopUp.css";
-import { useStateValue } from '../StateProvider';
+import {useSelector} from"react-redux";
 import Rating from '@mui/material/Rating';
 import CurrencyFormat from 'react-currency-format';
 import DeleteForever from '@mui/icons-material/DeleteForever';
-import { basketTotal } from '../reducer';
 import CancelIcon from '@mui/icons-material/Cancel';
+import {RemoveFromCart} from "../redux/basket";
+import {useDispatch} from"react-redux";
+import { basketTotal } from "../redux/basket";
 
 
-function CartPopUp({id,setOpen}) {
-    const [{basket},dispatch]=useStateValue()
+function CartPopUp({id,setOpens}) {
+  const {basket}=useSelector((state)=>state.basket)
+  const total = useSelector(basketTotal);
+  const dispatch=useDispatch()
+  
+
     const closeHandler=()=>{
-     setOpen(false)
+     setOpens(false)
     }
     const removeProductHandler=()=>{
-        dispatch({    //remove item from cart
-          type:"Remove_From_cart",
-          id:id
-        })}
+      dispatch(RemoveFromCart({id}))  }
   return (
     <div className='CartPopUp'>
      <div className='head'>
@@ -28,7 +31,7 @@ function CartPopUp({id,setOpen}) {
         basket.map((items)=>{
            return(
             <>
-            <div className="CheckoutProducts">
+            <div key={items.id} className="CheckoutProducts">
         <img className="CheckoutProducs-img"src={items.img}/>
      <div className="CheckoutProducts-wraps">
     
@@ -63,7 +66,7 @@ function CartPopUp({id,setOpen}) {
           </small>
           </>
   )}
-            decimalScale={2} value={basketTotal(basket)} displayType={"text"} thousandSeparator={true} prefix={"₹ "}
+            decimalScale={2} value={total} displayType={"text"} thousandSeparator={true} prefix={"₹ "}
         />
         <button>Proceed To checkout</button>
     </div>

@@ -1,15 +1,15 @@
 import React from 'react';
 import "./CheckoutProduct.css";
 import Rating from '@mui/material/Rating';
-import { useStateValue } from '../StateProvider';
+import {useSelector} from"react-redux";
+import {useDispatch} from"react-redux";
+import {RemoveFromCart} from "../redux/basket"
 
 function CheckoutProduct({id,img,title,ratting,price}) {
-  const [{basket},dispatch]=useStateValue()
+  const {basket}=useSelector((state)=>state.basket)
+  const dispatch=useDispatch()
   const removeProductHandler=()=>{
-  dispatch({    //remove item from cart
-    type:"Remove_From_cart",
-    id:id
-  })}
+  dispatch(RemoveFromCart({id}))}
   return (
     <div className="CheckoutProduct">
         <img className="CheckoutProduc-img"src={img}/>
@@ -26,7 +26,8 @@ function CheckoutProduct({id,img,title,ratting,price}) {
             </p>
         </div>
         <button onClick={removeProductHandler}>Remove Item</button>
-    </div></div>
+    </div>
+    </div>
   )
 }
 

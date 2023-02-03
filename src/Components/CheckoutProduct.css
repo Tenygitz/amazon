@@ -27,6 +27,8 @@
 }
 .CheckoutProduct{
     display: flex;
+    margin-bottom: 30px;
+    
 }
 .CheckoutProduct-wrap > h1,span{
     margin-bottom: 10px;
@@ -46,4 +48,11 @@
     background-color: rgb(209, 150, 40);
     padding: 5px 10px;
     margin-top: 20px;
+    width: 200px;
+}
+@media screen and (max-width:767px){
+    .CheckoutProduct-wrap > button{
+        
+        width: 100px;
+    }
 }

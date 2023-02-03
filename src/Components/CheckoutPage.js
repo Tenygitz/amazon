@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from "./Header";
 import "./CheckoutPage.css"
-import { useStateValue } from '../StateProvider';
+import {useSelector} from"react-redux";
 import CheckoutProduct from './CheckoutProduct';
 import SubTotal from './SubTotal';
 import Footer from './Footer';
 
 function CheckoutPage() {
-  const [{basket}]=useStateValue()
+  const {basket}=useSelector((state)=>state.basket)
   return (<>
     <div className="CheckoutPage">
         <Header/>
@@ -23,6 +23,7 @@ function CheckoutPage() {
       <div className='checkout'>
         <div className="your-cart">
           <h2>Your Cart Products</h2>
+      
           {
             basket.map((item)=>{
              return(<CheckoutProduct id={item.id}
@@ -31,9 +32,9 @@ function CheckoutPage() {
               price={item.price}
               ratting={item.ratting}
                      
-              />)
-})
+              />)})
           }
+         
         </div>
      </div> )
     }{

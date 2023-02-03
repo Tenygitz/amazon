@@ -1,13 +1,18 @@
 import React from 'react';
 import "./SubTotal.css";
 import CurrencyFormat from 'react-currency-format';
-import { useStateValue } from '../StateProvider'
-import { basketTotal } from '../reducer';
+import {useSelector} from"react-redux";
+import { basketTotal } from "../redux/basket";
+
 
 
 function SubTotal() {
    
-    const [{basket},dispatch]=useStateValue()
+  const {basket}=useSelector((state)=>state.basket)
+  const total = useSelector(basketTotal);
+
+   
+   
   return (
    
     <div className='SubTotals'>
@@ -21,7 +26,7 @@ function SubTotal() {
           </small>
           </>
   )}
-            decimalScale={2} value={basketTotal(basket)} displayType={"text"} thousandSeparator={true} prefix={"₹ "}
+            decimalScale={2} value={total} displayType={"text"} thousandSeparator={true} prefix={"₹ "}
         />
         <button>Proceed To checkout</button>
     </div>

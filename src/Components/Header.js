@@ -2,13 +2,20 @@ import React,{useState} from 'react';
 import "./Header.css";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useStateValue } from '../StateProvider';
 import {useNavigate} from "react-router-dom";
+import { Avatar } from '@mui/material';
+import {useSelector} from"react-redux";
 import CartPopUp from './CartPopUp';
+import SignOut from './SignOut';
+
+
 function Header() {
   const [open,setOpen]=useState(false)
+  const [opens,setOpens]=useState(false)
+  const {basket}=useSelector((state)=>state.basket)
   const navigate=useNavigate()
-  const [{basket}]=useStateValue();
+  
+  const {user}=useSelector((state)=>state.user)
   return (
     <div className="header">
     <img onClick={()=>navigate("/")} className="logo" src="https://pnggrid.com/wp-content/uploads/2021/05/Amazon-Logo-Transparent-1024x310.png"alt="logo"/>
@@ -24,10 +31,17 @@ function Header() {
         <input type="text" />
         <SearchIcon className='searchIcon'/>
     </div>
-    <div onClick={()=>navigate("/login")} className="nav-section">
-      <span className='section1'>Teny</span>
-      <span className='section2'>Sign In</span>
+    <div className="nav-section" >
+      <Avatar onClick={()=>setOpen(!open)} src={user?.photoURL} />
+      <div>
+      <h5 className='section1'>{user?.displayName}</h5> 
+      <h5 onClick={()=>navigate("/login")} className='section2'>Sign In</h5>
+      </div>
+      {open &&
+      <SignOut />
+    }
     </div>
+    
     <div className="nav-section2">
       <span className='section1' >Return</span>
       <span  className='section2'>& Orders</span>
@@ -42,16 +56,16 @@ function Header() {
       <span className='section2'>Cart</span>
    
     </div>
-    <div className="nav-section1" onClick={()=>setOpen(!open)}>
+    <div className="nav-section1" onClick={()=>setOpens(!opens)}>
     
       <ShoppingCartIcon className='cartIcon' />
       <span className='section2'>{basket?.length}</span>
    
     </div>
     {
-      open && basket.map((items)=>{
+      opens && basket?.map((items)=>{
       return(
-      <CartPopUp id={items.id} setOpen={setOpen}
+      <CartPopUp id={items.id} setOpens={setOpens}
       />)
      
     })}
