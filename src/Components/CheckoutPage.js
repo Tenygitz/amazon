@@ -1,10 +1,10 @@
 import React from 'react';
 import Header from "./Header";
-import "./CheckoutPage.css"
 import {useSelector} from"react-redux";
 import CheckoutProduct from './CheckoutProduct';
 import SubTotal from './SubTotal';
 import Footer from './Footer';
+import "./CheckoutPage.css"
 
 function CheckoutPage() {
   const {basket}=useSelector((state)=>state.basket)

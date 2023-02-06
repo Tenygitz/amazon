@@ -1,5 +1,4 @@
 import React from 'react';
-import "./CartPopUp.css";
 import {useSelector} from"react-redux";
 import Rating from '@mui/material/Rating';
 import CurrencyFormat from 'react-currency-format';
@@ -8,18 +7,22 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import {RemoveFromCart} from "../redux/basket";
 import {useDispatch} from"react-redux";
 import { basketTotal } from "../redux/basket";
+import "./CartPopUp.css";
 
 
-function CartPopUp({id,setOpens}) {
+function CartPopUp({setOpens,id}) {
   const {basket}=useSelector((state)=>state.basket)
+  const {user}=useSelector((state)=>state.user) 
   const total = useSelector(basketTotal);
   const dispatch=useDispatch()
-  
+   console.log("popupbasket",basket.id)
+     
 
     const closeHandler=()=>{
      setOpens(false)
     }
     const removeProductHandler=()=>{
+    
       dispatch(RemoveFromCart({id}))  }
   return (
     <div className='CartPopUp'>
@@ -65,10 +68,10 @@ function CartPopUp({id,setOpens}) {
             <input type="checkbox"/>This order contain voucteers
           </small>
           </>
-  )}
+        )}
             decimalScale={2} value={total} displayType={"text"} thousandSeparator={true} prefix={"₹ "}
         />
-        <button>Proceed To checkout</button>
+        <button disabled={!user}>{!user?"Please Sign The account for checkout":"Proceed To checkout"}</button>
     </div>
   
       
