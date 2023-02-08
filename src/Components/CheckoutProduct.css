@@ -6,10 +6,10 @@
 }
 @media screen and (max-width:767px){
     .CheckoutProduc-img {
-        width: 150px;
-   margin-left: 20px;
-      
-       
+        width: 120px;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: 0px;
       }
 }
 .CheckoutProduct-wrap{
@@ -21,23 +21,27 @@
     .CheckoutProduct-wrap{
         display: flex;
         flex-direction: column;
-        padding: 30px;
-        margin-top: 15px;
+        padding: 0;
     }
 }
 .CheckoutProduct{
     display: flex;
-    margin-bottom: 30px;
-    
+    width: 900px;
+    background-color: white;
+}
+@media screen and (max-width:767px){
+    .CheckoutProduct{
+        display: flex;
+        width: 190px;
+        background-color: white;
+    }
 }
 .CheckoutProduct-wrap > h1,span{
     margin-bottom: 10px;
 }
 @media screen and (max-width:767px){
     .CheckoutProduct-wrap > h1 {
-  font-size: 20px;
-      
-       
+        font-size: 15px;
       }
 }
 .price-infos > span{
@@ -52,7 +56,9 @@
 }
 @media screen and (max-width:767px){
     .CheckoutProduct-wrap > button{
-        
-        width: 100px;
+        margin-top: 0px;
+        width: 90px;
+        padding: 5px 20px;
+        border-radius: 20px;
     }
 }

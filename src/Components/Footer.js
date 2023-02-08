@@ -91,8 +91,6 @@ function Footer() {
         <span>United Arab Emirates</span>
         <span>United Kingdom</span>
         <span>United States</span>
-      
-
        </div>
       </div>
       <div className='Footer-end'>

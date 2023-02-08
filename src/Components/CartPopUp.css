@@ -1,7 +1,6 @@
 .CartPopUp{
-   
     position: absolute;
-    top :100px;
+    top :55px;
     right: 30px;
     z-index: 9999;
     background-color:white;
@@ -9,11 +8,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 @media screen and (max-width:767px){
     .CartPopUp{
-   
         position: absolute;
         top :65px;
         right: 5px;
@@ -61,7 +58,6 @@
 .Delete{
     display: flex;
     align-items: center;
-   
     padding-left: 2px;
 }
 .CheckoutProducts-wraps>h1,span{

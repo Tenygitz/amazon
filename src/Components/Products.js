@@ -1,5 +1,4 @@
 import React,{useState} from 'react';
-import "./Product.css";
 import Rating from '@mui/material/Rating';
 import {useNavigate} from"react-router-dom"
 import ProductOverView from './ProductOverView';
@@ -7,6 +6,7 @@ import {useDispatch} from"react-redux";
 import {useSelector} from"react-redux";
 import {AddToCart} from "../redux/basket";
 import {AddToProductOverView} from "../redux/basket"
+import "./Product.css";
 
 function Product({id,title,ratting,price,img,images,img1,img2,img3,imagefolder,description}) {
   const {basket}=useSelector((state)=>state.basket)
@@ -16,8 +16,6 @@ function Product({id,title,ratting,price,img,images,img1,img2,img3,imagefolder,d
   console.log("basketItem",basket)
   console.log("titkleoFthe",title)
   const addToBasketHandler=()=>{
-   
-    
    const item={
       id:id,
       title:title,
@@ -59,12 +57,10 @@ function Product({id,title,ratting,price,img,images,img1,img2,img3,imagefolder,d
         {
          open && 
             (<ProductOverView title={title} price={price}  />)
-          
         }
         <img className="productImage" src={images} onClick={()=>navigate("/productView")} />
         </div>
         <button onClick={addToBasketHandler}>Add to Cart</button>
-
     </div>
   )
 }

@@ -1,21 +1,18 @@
 .SubTotals{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    max-width: 400px;
-    max-height: 200px;
-    margin-left: 50px;
-    margin-top: 20px;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    background-color: white;
     margin-bottom: 20px;
-    background-color: beige;
+    padding:20px   
 }
 @media screen and (max-width:767px){
     .SubTotals  {
-        max-width: 250px;
-        max-height: 200px;
-        margin-left: 20px;
-      
-       
+        max-width: 180px;
+        max-height: 170px;
+        margin-left: 10px;
       }
 }
 .SubTotals > p{
@@ -24,7 +21,6 @@
 @media screen and (max-width:767px){
     .SubTotals>h1  {
        font-size: 27px;
-       
       }
 }
 .SubTotals > button{

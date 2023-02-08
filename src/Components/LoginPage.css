@@ -4,18 +4,16 @@
     margin-bottom: 20px;
     object-fit: contain;
     cursor: pointer;
-  
 }
 .LoginPage{
     display: flex;
-   flex-direction: column;
-  align-items: center;
+    flex-direction: column;
+    align-items: center;
     height: 70vh;
 }
 @media screen and (max-width:767px){
     .LoginPage {
-        height: 65vh;
-        
+        height: 65vh;   
     }
 }
 .LoginPage-Details{
@@ -25,7 +23,6 @@
     padding: 20px;
     border: 1px solid grey;
     background-color: whitesmoke;
- 
 }
 @media screen and (max-width:767px){
     .LoginPage-Details {
@@ -51,7 +48,6 @@
     padding: 5px 10px;
     margin-top: 5px;
     margin-bottom: 10px;
-    
 }
 .LoginPage-Details>p{
     font-size: 13px;

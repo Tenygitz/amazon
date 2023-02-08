@@ -1,7 +1,6 @@
-
 .SignOut{
     position: absolute;
-    top :57px;
+    top :55px;
     right:170px;
     z-index: 999 ;
     border: 2px solid lightgrey;
@@ -10,7 +9,6 @@
     width: 250px;
     background-color: white;
     box-shadow: 10px;
-  
 }
 @media screen and (max-width:767px){
     .SignOut{
@@ -24,7 +22,6 @@
         width: 200px;
         background-color: white;
         box-shadow: 10px;
-      
     }
 }
 .signout-avatar{
@@ -49,11 +46,10 @@
 }
 .premium{
     display: flex;
- align-items: center;
+    align-items: center;
     gap:20px
 }
 .paymenticon{
-   
     background-color: sandybrown;
 }
 .SignOut>h4{

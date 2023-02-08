@@ -5,12 +5,10 @@
     margin-right: 10px;
     background-color: azure;
     z-index: 5;
-    width: 250px;
-    
+    width: 250px; 
 }
 @media screen and (max-width:767px){
     .products{
-       
         margin-left: 80px;
         margin-right: 50px;
         background-color: azure;
@@ -18,11 +16,8 @@
         margin-bottom: 30px;
         text-align: center;
         padding-top: 5px;
-        
     }
 }
-
-
 .products >button{
     background-color: rgb(243, 174, 46);
     border: none;
@@ -55,8 +50,7 @@ margin-left: 10px;
         height: 200px;
         margin-bottom: 10px;
         overflow: hidden;
-        position: relative;
-       
+        position: relative;  
     }
 }
 .imgdiv>img{
@@ -78,7 +72,6 @@ margin-left: 10px;
     z-index: 1;
 }
 .imgdiv:hover .productImage{
-    z-index: 999;
-    
+    z-index: 999; 
 }
 

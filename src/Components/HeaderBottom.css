@@ -1,0 +1,31 @@
+.HeaderProfile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+}
+.HeaderBottom{
+      display: flex;
+      align-items: center;
+      height: 50px;
+      gap: 20px;
+      position: static;
+      top: 100;
+      z-index: 999;
+      background-color: #131e3b;
+      color: white;
+      width: 100%;
+      cursor: pointer;   
+}
+@media screen and (max-width:767px){
+    .HeaderBottom{
+        display: none;
+    } 
+}
+.HeaderBottom>h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+.HeaderBottom :hover{
+    border:1px soild white;
+}

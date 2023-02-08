@@ -5,13 +5,11 @@ import { basketTotal } from "../redux/basket";
 import "./SubTotal.css";
 
 function SubTotal() {
-   
   const {user}=useSelector((state)=>state.user) 
   const {basket}=useSelector((state)=>state.basket)
   const total = useSelector(basketTotal);
-   
+
   return (
-   
     <div className='SubTotals'>
         <h1>SubTotal</h1>
         <CurrencyFormat //currency format library

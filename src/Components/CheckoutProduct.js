@@ -1,9 +1,9 @@
 import React from 'react';
-import "./CheckoutProduct.css";
 import Rating from '@mui/material/Rating';
 import {useSelector} from"react-redux";
 import {useDispatch} from"react-redux";
-import {RemoveFromCart} from "../redux/basket"
+import {RemoveFromCart} from "../redux/basket";
+import "./CheckoutProduct.css";
 
 function CheckoutProduct({id,img,title,ratting,price}) {
   const {basket}=useSelector((state)=>state.basket)
@@ -14,10 +14,8 @@ function CheckoutProduct({id,img,title,ratting,price}) {
     <div className="CheckoutProduct">
         <img className="CheckoutProduc-img"src={img}/>
      <div className="CheckoutProduct-wrap">
-    
      <h1>{title}</h1>
-    
-    <div className='price-infos'>
+     <div className='price-infos'>
             <span>₹ </span>
             <span>{price}</span>
         </div>

@@ -18,19 +18,17 @@
     max-width: 1400px;
     margin: auto;
     margin-bottom: 50px;
-    
 }
 .rows{
     display: flex;
-   margin-top: 20px;
-   justify-content: space-evenly;
+    margin-top: 20px;
+    justify-content: space-evenly;
     
 }
 @media screen and (max-width:767px){
     .rows{
        display: block;
        margin-top: 20px;
-        
     }
 }
 @media screen and (max-width:767px){

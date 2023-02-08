@@ -1,0 +1,42 @@
+.RelatedProduct{
+    width: 300px;
+    height: 550px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:767px){
+    .RelatedProduct{
+        width: 200px;
+        height: 650px;
+        background-color: white;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+}
+.RelatedProduct-info{
+    display: flex;
+    gap: 10px; 
+}
+.RelatedProduct-info>img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.RelatedProduct-info{
+    padding: 10px;
+}
+.RelatedProduct>h3{
+    padding: 10px;
+}
+.CartsBtn{
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(243, 174, 46) ;
+    cursor: pointer;
+}
+.prices-info{
+    font-weight: 300;
+}

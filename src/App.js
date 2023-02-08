@@ -1,6 +1,3 @@
-
-import './App.css';
-
 import HomePage from './Components/HomePage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CheckoutPage from './Components/CheckoutPage';
@@ -12,10 +9,10 @@ import ProductOverView from './Components/ProductOverView';
 import {useSelector} from"react-redux";
 import {useDispatch} from"react-redux";
 import {login,logout} from "./redux/cart";
+import './App.css';
 
 
 function App() {
-
 const {user}=useSelector((state)=>state.user)
 console.log("thrrr", user);
 const dispatch=useDispatch()
@@ -44,17 +41,13 @@ console.log("userr",user)
   return (
     <Router>
     <div className="App">
-      
      <Routes>
-       
      <Route path="/" element={ <HomePage/>}/>
      <Route path="/checkout" element={ <CheckoutPage/>}/>
      <Route path="/login" element={<LoginPage/>}/>
      <Route path="/signup" element={<SignUpPage/>}/>
      <Route  path="/productView" element={<ProductOverView/>}/>
-    
      </Routes>
-    
     </div>
     </Router>
   );

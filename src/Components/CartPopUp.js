@@ -9,21 +9,25 @@ import {useDispatch} from"react-redux";
 import { basketTotal } from "../redux/basket";
 import "./CartPopUp.css";
 
-
 function CartPopUp({setOpens,id}) {
   const {basket}=useSelector((state)=>state.basket)
   const {user}=useSelector((state)=>state.user) 
   const total = useSelector(basketTotal);
   const dispatch=useDispatch()
    console.log("popupbasket",basket.id)
-     
+   function truncate(string,n){
+    return(
+        string?.length>n?string.substr(0,n-1)+"...":string
+          )
+       }
 
     const closeHandler=()=>{
      setOpens(false)
     }
+
     const removeProductHandler=()=>{
-    
-      dispatch(RemoveFromCart({id}))  }
+    dispatch(RemoveFromCart({id})) 
+    }
   return (
     <div className='CartPopUp'>
      <div className='head'>
@@ -35,30 +39,30 @@ function CartPopUp({setOpens,id}) {
            return(
             <>
             <div key={items.id} className="CheckoutProducts">
-        <img className="CheckoutProducs-img"src={items.img}/>
-     <div className="CheckoutProducts-wraps">
+           <img className="CheckoutProducs-img"src={items.img}/>
+           <div className="CheckoutProducts-wraps">
+   
+           <h1>{truncate((items.title),15)}</h1>
     
-     <h1>{items.title}</h1>
-    
-    <div className='prices-infos'>
+           <div className='prices-infos'>
             <span>₹ </span>
             <span>{items.price}</span>
-        </div>
-        <div className='rattings-infos'>
+           </div>
+           <div className='rattings-infos'>
                 <p><Rating name="half-rating-read"  defaultValue={items.ratting} precision={0.5} readOnly />
             </p>
-        </div>
-        <div className='Delete'>
+          </div>
+           <div className='Delete'>
             <h5>Remove Item</h5>
-       <DeleteForever onClick={removeProductHandler} className='DeleteIcon'/>
-       </div>
-    </div>
+           <DeleteForever onClick={removeProductHandler} className='DeleteIcon'/>
+        </div>
+         </div>
         </div>
             </>
            ) 
         })
-      }<div className='cartSub'>
-          
+      }
+      <div className='cartSub'>
         <h1>SubTotal</h1>
         <CurrencyFormat //currency format library
           renderText={(value)=>(
@@ -73,8 +77,6 @@ function CartPopUp({setOpens,id}) {
         />
         <button disabled={!user}>{!user?"Please Sign The account for checkout":"Proceed To checkout"}</button>
     </div>
-  
-      
     </div>
   )
 }

@@ -1,22 +1,19 @@
 import React,{useState} from 'react';
 import Header from './Header';
 import Rating from '@mui/material/Rating';
-import "./ProductOverView.css";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Footer from './Footer';
 import {useSelector} from"react-redux";
 import {useDispatch} from"react-redux";
 import {AddToCart} from "../redux/basket";
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+import "./ProductOverView.css";
 
 
 function ProductOverView() {
   const {productOverView}=useSelector((state)=>state.basket)
   const dispatch=useDispatch()
-
   const addToBasketHandler=()=>{
-   
-    
     const item={
        id:productOverView.id,
        title:productOverView.title,
@@ -29,9 +26,6 @@ function ProductOverView() {
 const [selectImg,setSelectImg]=useState(0)
    const description=productOverView.description
   console.log("gtttt",productOverView)
- 
-   
-  
   return (<>
   <Header/>
     <div className='ProductOverView' >
@@ -70,7 +64,6 @@ const [selectImg,setSelectImg]=useState(0)
          }
         </div>
         <button onClick={addToBasketHandler} className='CartBtn'>Add Cart  <ShoppingCartIcon  /></button>
-      
         </div>
     </div>
     <Footer/>

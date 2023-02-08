@@ -1,24 +1,21 @@
-
 .ProductOverView{
     display: flex;
     justify-content: space-evenly;
-   margin-top: 20px;
-   margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 @media screen and (max-width:767px){
     .ProductOverView{
         display: block;
-       
+        margin-top: 10px;
     }
 }
 .left>img{
- display: flex;
- max-width: 100px;
- max-height: 100px;
- object-fit: cover;
- margin-bottom: 20px;
-
- 
+     display: flex;
+     max-width: 100px;
+     max-height: 100px;
+     object-fit: cover;
+     margin-bottom: 20px;
 }
 .leftdiv{
     display:flex;
@@ -39,8 +36,6 @@
         height: 80px;
         object-fit: contain;
         margin-bottom: 5px;
-       
-        
        }
 }
 .left>img:hover{
@@ -50,14 +45,12 @@
     width: 500px;
     height: 500px;
     object-fit: contain;
-
 }
 @media screen and (max-width:767px){
     .mainImg>img{
-        width: 250px;
+    width: 250px;
     height: 250px;
-    object-fit: contain;
-        
+    object-fit: contain; 
     }
 }
 .ProductOverView-container{
@@ -67,7 +60,6 @@
     .ProductOverView-container{
      max-width: 350px;
      margin: auto;
-    
     }
 }
 .ProductOverView-container>h1{

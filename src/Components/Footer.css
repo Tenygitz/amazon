@@ -4,19 +4,16 @@
     background-color:#28313B;
     border-bottom: 1px solid rgb(117, 113, 113);
     padding-left: 50px;
-    padding-right: 50px;
-    
+    padding-right: 50px; 
 }
 @media screen and (max-width:767px){
     .Links{
         padding-left: 20px;
-    padding-right: 20px;;
-       
+        padding-right: 20px;
       }
 }
 li{
     list-style: none;
-    
 }
 
 .Ontop{
@@ -24,9 +21,7 @@ li{
     justify-content: center;
     background-color: #637283;
     padding-top: 15px;
-    padding-bottom: 15px;
-  
-   
+    padding-bottom: 15px; 
 }
 .Ontop>button{
     border: none;
@@ -37,7 +32,6 @@ li{
 @media screen and (max-width:767px){
     .Footer{
         height: 70vh;
-       
       }
 }
 a{
@@ -63,7 +57,6 @@ margin-top: 5px;
 @media screen and (max-width:767px){
     .Links-container2{
         display: none;
-       
       }
 }
 .Links-container2 >h2{
@@ -80,15 +73,11 @@ margin-top: 5px;
 @media screen and (max-width:767px){
     .Footer1 >img   {
         width: 100px;
-       
       }
 }
 .Footer1{
     display: flex;
     justify-content: center;
-   
-  
-   
 }
 .Footer-wrap{
     background-color:#28313B;
@@ -99,7 +88,6 @@ margin-top: 5px;
     .Footer-wrap{
         padding-top: 20px;
         padding-bottom: 20px;
-       
       }
 }
 
@@ -107,19 +95,17 @@ margin-top: 5px;
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  
 }
 @media screen and (max-width:767px){
     .country{
-        display: none;
-       
+       display: none;
       }
 }
 .country> span{
     margin-left: 5px;
-  margin-right: 5px;
-  font-size: 15px;
-  color: #ddd;
+    margin-right: 5px;
+    font-size: 15px;
+    color: #ddd;
 }
 .language{
     display: flex;
@@ -132,8 +118,8 @@ margin-top: 5px;
    text-align: center;
    color:aliceblue;
    background-color: #131A22;
-  padding-top: 30px;
-  padding-bottom: 50px;
+   padding-top: 30px;
+   padding-bottom: 50px;
 }
 .language >i{
     color: aliceblue;
@@ -142,17 +128,14 @@ margin-top: 5px;
 @media screen and (max-width:767px){
     .language >i {
         padding-right: 2px;
-       
       }
 }
-
 .Footer-end-content> span{
     margin-right: 10px;
 }
 @media screen and (max-width:767px){
     .Footer-end-content{
         margin-bottom: 10px;
-       
       }
 }
 .language > h1{
@@ -160,12 +143,10 @@ margin-top: 5px;
     color: #ddd;
     padding-right: 10px;
 }
-
 @media screen and (max-width:767px){
     .language > h1   {
         font-size: 14px;
         padding-right: 5px;
         padding-top: 2px;
-       
       }
 }

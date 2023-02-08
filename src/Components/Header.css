@@ -12,7 +12,6 @@
         margin-top: 10px;
         margin-left: 10px;
         margin-right: 10px;
-      
     }
 }
 .header{
@@ -23,59 +22,91 @@
     top: 0;
     z-index: 100;
 }
-
-@media screen and (max-width:767px){
-    .header{
-   
-    }
-}
 .searchIcon{
     background-color: orange;
-    padding: 2px;
+    padding: 3px;
+    height: 35px !important;
+    width: 35px !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius:5px ;
+}
+@media screen and (max-width:767px){
+    .searchIcon{
+        padding: 5px;
+        height: 30px !important;
+        width: 30px !important;
+    }
+}
+.dropDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 231, 231);
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; 
+}
+
+@media screen and (max-width:767px){
+    .dropDown{
+        display: none;
+    }
+}
+.DropdownList{
+    position: absolute;
+    top:37px;
+    color: black;
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+}
+.DropdownList>ul>li{
+    padding: 3px;
+}
+.DropdownList>ul>li:hover{
+    background-color: darkturquoise;
+    color: white;
 }
 .searchBar{
     display: flex;
     flex: 1;
-    
+    margin-right: 20px;
 }
+
 @media screen and (max-width:767px){
     .searchBar{
         display: flex;
         flex: 0;
-       
-        
+        margin-right:0px;
     }
 }
-@media screen and (max-width:767px){
-   
-    .searchBar>input{
-        padding:0px;
-        height: 23px;
-        width:120px
-    }
-}
+
 .searchBar > input{
     padding:10px;
-    height: 25px;
+    height: 35px;
+    width: 100%;
+    outline: none;
+}
+@media screen and (max-width:767px){
+    .searchBar>input{
+        padding:0px;
+        height: 30px;
+        width: 80px;
+    }
 }
 .nav-section{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
- 
-  
+    gap: 10px; 
 }
 @media screen and (max-width:767px){
     .nav-section{
-       
        margin-left:5px;
        margin-right: 0px;
        gap:0px;
-      
     }
 }
-
 .section1{
     font-size: 15px;
     color: rgba(209, 199, 199, 0.932);
@@ -85,13 +116,6 @@
     font-size: 20px;
     color: azure;
     font-weight: 600;
-}
-@media screen and (max-width:767px){
-    .nav-section .section2{
-       
-       display: none;
-      
-    }
 }
 .cartIcon{
     color:azure;
@@ -104,27 +128,24 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-   margin-left: 10px;
-   margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 @media screen and (max-width:767px){
     .nav-section2{
         display: none;
-       
     }
 }
 .nav-section3{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-   margin-left: 10px;
-   margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
-
 @media screen and (max-width:767px){
     .nav-section3{
         display: none;
-       
     }
 }
 .nav-section1 > span{
@@ -144,16 +165,14 @@
     align-items: center;
     margin-right: 50px;
     margin-left: 30px;
-   
 }
 @media screen and (max-width:767px){
     .location{
-
         display: none;
     }
 }
 
 .locationIcon>i{
-padding-top: 12px;
-padding-right: 5px;
+   padding-top: 12px;
+   padding-right: 5px;
 }

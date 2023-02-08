@@ -1,7 +1,5 @@
-
 import React,{useState} from 'react';
 import Header from './Header';
-import "./SignUpPage.css";
 import {createUserWithEmailAndPassword,updateProfile  } from "firebase/auth";
 import {  ref, uploadBytesResumable,getDownloadURL } from "firebase/storage";
 import { auth, db } from '../Firebase';
@@ -9,6 +7,7 @@ import { doc, setDoc } from "firebase/firestore";
 import {storage} from "../Firebase";
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
+import "./SignUpPage.css";
 
 
 function SignUpPage() {
